@@ -1,0 +1,158 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1b1b1b; /* Dark theme background */
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 70%;
+    border: 5px solid #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05) rotate(3deg); /* Adding a subtle effect on hover */
+}
+
+h1 {
+    font-size: 2.8em;
+    margin: 15px 0;
+    color: #00bcd4; /* Accent color for your name */
+}
+
+p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #b0bec5;
+}
+
+/* Styling sections */
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 25px;
+    background: #2e2e2e;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Adds a slight lift effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffca28;
+    border-bottom: 3px solid #ffca28;
+    display: inline-block;
+    padding-bottom: 6px;
+    transition: color 0.3s ease-in-out;
+}
+
+h2:hover {
+    color: #ff9800; /* Hover color for section titles */
+}
+
+/* List and item styles */
+ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+li {
+    font-size: 1.2em;
+    padding: 8px 0;
+    color: #cfd8dc;
+    position: relative;
+    transition: color 0.3s;
+}
+
+li:hover {
+    color: #00bcd4;
+}
+
+li::before {
+    content: '➔';
+    color: #ffca28;
+    font-size: 1.2em;
+    margin-right: 10px;
+    position: absolute;
+    left: -25px;
+    transition: color 0.3s;
+}
+
+li:hover::before {
+    color: #ff9800;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 40px;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    background-color: #333;
+    color: #e0e0e0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Animation for entry effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    section {
+        width: 100%;
+        padding: 20px;
+    }
+}
